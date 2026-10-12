@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "../styles/MobileSidebar.css";
+import "../styles/NavbarSuperior.css";
 
 import MobileSidebar from "../components/MobileSidebar";
 import NavbarSuperior from "../components/NavbarSuperior";
