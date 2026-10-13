@@ -4,7 +4,8 @@
 export default function NavbarSuperior() {
     return (
         <nav className="navbar-superior">
-            <div className="navbar-container"><a href="#" className="navbar-logo"><img src="/logo.png" alt="Logo" /></a>
+            <div className="navbar-container">
+                <a href="#" className="navbar-logo"><img src="/logo.png" alt="Logo" /></a>
                 <div className="navbar-actions">
                     <a href="#" className="navbar-button"><svg className="navbar-button-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2c.45 3.05 1.35 5.25 2.75 6.65C16.15 10.05 17.95 10.85 21 12c-3.05 1.15-4.85 1.95-6.25 3.35C13.35 16.75 12.45 18.95 12 22c-.45-3.05-1.35-5.25-2.75-6.65C7.85 13.95 6.05 13.15 3 12c3.05-1.15 4.85-1.95 6.25-3.35C10.65 8.05 11.55 5.05 12 2Z" />

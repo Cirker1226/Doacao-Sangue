@@ -1,4 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/globals.css";
+import "../styles/Error404.css";
 import "../styles/MobileSidebar.css";
 import "../styles/NavbarSuperior.css";
 
