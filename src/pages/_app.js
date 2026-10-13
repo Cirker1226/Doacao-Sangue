@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import "../styles/globals.css";
 import "../styles/Error404.css";
+import "../styles/cadastroQuiz.css";
 import "../styles/MobileSidebar.css";
 import "../styles/NavbarSuperior.css";
 
@@ -13,7 +15,7 @@ export default function App({ Component, pageProps }) {
       <NavbarSuperior />
       <MobileSidebar />
 
-      <main className="pt-5 pb-5">
+      <main className="pt-1 pb-5">
         <Component {...pageProps} />
       </main>
     </>

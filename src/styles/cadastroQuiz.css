@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.quiz-perguntas {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    margin-bottom: 10rem;
+}
+
+#pagina-tittle {
+    font-size: 1.5rem;
+    font-weight: 750;
+    color: #000;
+    overflow-wrap: break-word;
+}
+
+#pagina-subtitle {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.container-crud {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #c08e9b;
+    color: #000000;
+    border-radius: 0.8rem;
+    padding: 1rem 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-crud {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-crud input[type="text"],
+.form-crud textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #e6a8bb;
+    border-radius: 11px;
+    background-color: #fff8fa;
+    color: #421b29;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-crud input[type="text"]:focus,
+.form-crud textarea:focus {
+    border-color: #c81010;
+}
+
+.opcoes {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Esconde as bolinhas dos radios */
+
+.opcoes input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Botões das opções */
+
+.opcoes label {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    color: #421b29;
+    border: 1.5px solid #e6a8bb;
+    border-radius: 11px;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Mito selecionado */
+
+#mito:checked + label {
+    background-color: #fff0f3;
+    border-color: #c8103e;
+    color: #a20d32;
+}
+
+/* Verdade selecionada */
+
+#verdade:checked + label {
+    background-color: #fff0f3;
+    border-color: #c8103e;
+    color: #a20d32;
+}
+
+/* Efeito ao passar o mouse */
+
+.opcoes label:hover {
+    border-color: #c8103e;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.botoes button {
+    flex: 1;
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Cancelar */
+
+.btn-cadastrar {
+    border: 1px solid #e6a8bb;
+    background-color: #ffffff;
+    color: #8f2948;
+}
+
+.btn-cadastrar:hover {
+    background-color: #fff0f5;
+}
+
+.btn-editar {
+    border: 1px solid #c8103e;
+    background-color: #c8103e;
+    color: #ffffff;
+}
+
+.btn-editar:hover {
+    background-color: #a80d33;
+}
+
+.botoes button:active {
+    transform: scale(0.98);
+}
+
+/* Container para perguntas cadastradas */
+
+
+.container-cadastradas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #000;
+    width: 100%;
+}
+
+.perguntas-cadastradas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.perguntas-cadastradas h3,
+.perguntas-cadastradas p {
+    margin: 0;
+}
+
+.perguntas-cadastradas h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.perguntas-cadastradas p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Card da pergunta */
+.card-pergunta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    background-color: #fff;
+    border: 1px solid #e6a8bb;
+    border-radius: 0.8rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.card-pergunta:hover {
+    box-shadow: 0 3px 10px rgba(150, 50, 80, 0.08);
+}
+
+/* Ícone da pergunta */
+.icon-pergunta {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff0f3;
+    border: 1px solid #e6a8bb;
+    border-radius: 0.5rem;
+    color: #e63946;
+    font-size: 28px;
+}
+
+/* Texto */
+.pergunta-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.pergunta-content p {
+    margin: 0;
+}
+
+.pergunta-content p:first-child {
+    font-size: 1rem;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.pergunta-content .resposta {
+    color: #d63384;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Botões à direita */
+.acoes-pergunta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.btn-acao {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Editar */
+.btn-editar-pergunta {
+    color: #7c3aed;
+    background-color: #f3e8ff;
+    border-color: #ddd0fa;
+}
+
+.btn-editar-pergunta:hover {
+    background-color: #7c3aed;
+    color: #fff;
+}
+
+/* Excluir */
+.btn-excluir-pergunta {
+    color: #dc3545;
+    background-color: #fff0f0;
+    border-color: #f5c2c7;
+}
+
+.btn-excluir-pergunta:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .card-pergunta {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .icon-pergunta {
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+    }
+
+    .acoes-pergunta {
+        gap: 5px;
+    }
+
+    .btn-acao {
+        width: 30px;
+        height: 30px;
+    }
+}
